@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Top Info Bar */}
       <div
-        className={`hidden md:block transition-all duration-500 ease-in-out z-50 relative ${
+        className={`hidden md:block transition-all duration-300 ease-in-out z-50 relative ${
           isScrolled ? 'max-h-0 opacity-0 overflow-hidden' : 'max-h-12 opacity-100'
         }`}
       >
@@ -99,9 +99,9 @@ export default function Navbar() {
               </a>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/portal" className="hover:text-gold-300 transition-colors">Parent Portal</Link>
+              <Link href="/portal" prefetch={true} className="hover:text-gold-300 transition-colors">Parent Portal</Link>
               <span className="text-white/30">|</span>
-              <Link href="/admissions" className="bg-gold-500 hover:bg-gold-400 text-white px-3 py-1 rounded text-xs font-semibold transition-colors">
+              <Link href="/admissions" prefetch={true} className="bg-gold-500 hover:bg-gold-400 text-white px-3 py-1 rounded text-xs font-semibold transition-colors">
                 Apply Now
               </Link>
             </div>
@@ -111,7 +111,7 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-500 ease-in-out ${
+        className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${
           isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-black/5' : 'bg-transparent'
         }`}
         role="banner"
@@ -119,7 +119,7 @@ export default function Navbar() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
           <div className="flex items-center justify-between h-20">
             {/* Logo & Name */}
-            <Link href="/" className="flex items-center gap-3 group" aria-label="Khairiyyah Learning Centre - Home">
+            <Link href="/" prefetch={true} className="flex items-center gap-3 group" aria-label="Khairiyyah Learning Centre - Home">
               <div className={`relative w-12 h-12 rounded-full overflow-hidden transition-all duration-300 group-hover:scale-105 ${
                 isScrolled ? 'bg-white shadow-sm' : 'bg-white/20 backdrop-blur-sm border border-white/30'
               }`}>
@@ -157,7 +157,8 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    prefetch={true}
+                    className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isScrolled
                         ? 'text-charcoal hover:text-primary-600 hover:bg-primary-50'
                         : 'text-white/90 hover:text-white hover:bg-white/10'
@@ -167,13 +168,13 @@ export default function Navbar() {
                   >
                     {link.label}
                     {link.children && (
-                      <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === link.label ? 'rotate-180' : ''}`} />
+                      <ChevronDown size={14} className={`transition-transform duration-200 ${activeDropdown === link.label ? 'rotate-180' : ''}`} />
                     )}
                   </Link>
 
                   {link.children && (
                     <div
-                      className={`absolute top-full left-0 pt-2 transition-all duration-300 ${
+                      className={`absolute top-full left-0 pt-2 transition-all duration-200 ${
                         activeDropdown === link.label ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                       }`}
                       role="menu"
@@ -184,6 +185,7 @@ export default function Navbar() {
                           <Link
                             key={child.label}
                             href={child.href}
+                            prefetch={true}
                             className="block px-5 py-2.5 text-sm text-charcoal hover:text-primary-600 hover:bg-primary-50 transition-colors"
                             role="menuitem"
                           >
@@ -201,7 +203,8 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="/admissions"
-                className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 ${
+                prefetch={true}
+                className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   isScrolled
                     ? 'bg-primary-500 hover:bg-primary-600 text-white shadow-md shadow-primary-500/25 hover:shadow-lg'
                     : 'bg-gold-500 hover:bg-gold-400 text-white shadow-md shadow-black/20'
@@ -222,13 +225,13 @@ export default function Navbar() {
               aria-controls="mobile-menu"
             >
               <div className="w-6 h-6 flex flex-col justify-center items-center gap-1.5">
-                <span className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${
+                <span className={`block w-5 h-0.5 rounded-full transition-all duration-200 ${
                   isScrolled ? 'bg-charcoal' : 'bg-white'
                 } ${isMobileMenuOpen ? 'translate-y-2 rotate-45' : ''}`} />
-                <span className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${
+                <span className={`block w-5 h-0.5 rounded-full transition-all duration-200 ${
                   isScrolled ? 'bg-charcoal' : 'bg-white'
                 } ${isMobileMenuOpen ? 'opacity-0 scale-x-0' : ''}`} />
-                <span className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${
+                <span className={`block w-5 h-0.5 rounded-full transition-all duration-200 ${
                   isScrolled ? 'bg-charcoal' : 'bg-white'
                 } ${isMobileMenuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
               </div>
@@ -239,14 +242,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ${
+        className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeMobileMenu} aria-hidden="true" />
         <div
           id="mobile-menu"
-          className={`absolute top-0 right-0 h-full w-full max-w-sm bg-white shadow-2xl transition-transform duration-500 ease-in-out ${
+          className={`absolute top-0 right-0 h-full w-full max-w-sm bg-white shadow-2xl transition-transform duration-300 ease-in-out ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
           role="dialog"
@@ -255,7 +258,7 @@ export default function Navbar() {
         >
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-5 border-b border-gray-100">
-              <Link href="/" onClick={closeMobileMenu} className="flex items-center gap-2">
+              <Link href="/" prefetch={true} onClick={closeMobileMenu} className="flex items-center gap-2">
                 <div className="relative w-10 h-10 rounded-full overflow-hidden">
                   <Image src="/images/khairi.png" alt="Logo" fill sizes="40px" className="object-contain" />
                 </div>
@@ -280,18 +283,18 @@ export default function Navbar() {
                         aria-expanded={mobileSubmenu === link.label}
                       >
                         {link.label}
-                        <ChevronDown size={16} className={`transition-transform duration-300 ${mobileSubmenu === link.label ? 'rotate-180' : ''}`} />
+                        <ChevronDown size={16} className={`transition-transform duration-200 ${mobileSubmenu === link.label ? 'rotate-180' : ''}`} />
                       </button>
-                      <div className={`overflow-hidden transition-all duration-300 ${mobileSubmenu === link.label ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className={`overflow-hidden transition-all duration-200 ${mobileSubmenu === link.label ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
                         {link.children.map((child) => (
-                          <Link key={child.label} href={child.href} onClick={closeMobileMenu} className="block pl-10 pr-6 py-2.5 text-sm text-gray-600 hover:text-primary-600 hover:bg-primary-50 transition-colors">
+                          <Link key={child.label} href={child.href} prefetch={true} onClick={closeMobileMenu} className="block pl-10 pr-6 py-2.5 text-sm text-gray-600 hover:text-primary-600 hover:bg-primary-50 transition-colors">
                             {child.label}
                           </Link>
                         ))}
                       </div>
                     </>
                   ) : (
-                    <Link href={link.href} onClick={closeMobileMenu} className="block px-6 py-3.5 text-charcoal hover:text-primary-600 hover:bg-primary-50 transition-colors font-medium">
+                    <Link href={link.href} prefetch={true} onClick={closeMobileMenu} className="block px-6 py-3.5 text-charcoal hover:text-primary-600 hover:bg-primary-50 transition-colors font-medium">
                       {link.label}
                     </Link>
                   )}
@@ -300,7 +303,7 @@ export default function Navbar() {
             </div>
 
             <div className="border-t border-gray-100 p-5 space-y-3">
-              <Link href="/admissions" onClick={closeMobileMenu} className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white py-3 rounded-lg font-semibold transition-colors">
+              <Link href="/admissions" prefetch={true} onClick={closeMobileMenu} className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white py-3 rounded-lg font-semibold transition-colors">
                 Apply Now
               </Link>
               <div className="flex gap-3 text-sm text-gray-500">
