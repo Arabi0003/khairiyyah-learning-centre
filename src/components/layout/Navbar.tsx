@@ -93,9 +93,9 @@ export default function Navbar() {
                 <Phone size={13} />
                 <span>+233 59 461 9640</span>
               </a>
-              <a href="mailto:info@Khairiyyahedu.com" className="flex items-center gap-1.5 hover:text-gold-300 transition-colors">
+              <a href="mailto:info@khairiyyaedu.com" className="flex items-center gap-1.5 hover:text-gold-300 transition-colors">
                 <Mail size={13} />
-                <span>info@Khairiyyahedu.com</span>
+                <span>info@khairiyyaedu.com</span>
               </a>
             </div>
             <div className="flex items-center gap-4">
@@ -119,13 +119,13 @@ export default function Navbar() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
           <div className="flex items-center justify-between h-20">
             {/* Logo & Name */}
-            <Link href="/" className="flex items-center gap-3 group" aria-label="Khairiyyahh Learning Centre - Home">
+            <Link href="/" className="flex items-center gap-3 group" aria-label="Khairiyyah Learning Centre - Home">
               <div className={`relative w-12 h-12 rounded-full overflow-hidden transition-all duration-300 group-hover:scale-105 ${
                 isScrolled ? 'bg-white shadow-sm' : 'bg-white/20 backdrop-blur-sm border border-white/30'
               }`}>
                 <Image
                   src="/images/khairi.png"
-                  alt="Khairiyyahh Learning Centre Logo"
+                  alt="Khairiyyah Learning Centre Logo"
                   fill
                   sizes="48px"
                   className="object-contain p-0.5"
@@ -136,7 +136,7 @@ export default function Navbar() {
                 <span className={`text-lg font-heading font-bold leading-tight transition-colors duration-300 ${
                   isScrolled ? 'text-primary-700' : 'text-white'
                 }`}>
-                  Khairiyyahh
+                  Khairiyyah
                 </span>
                 <span className={`text-xs tracking-widest uppercase transition-colors duration-300 ${
                   isScrolled ? 'text-gold-500' : 'text-gold-300'
@@ -260,7 +260,7 @@ export default function Navbar() {
                   <Image src="/images/khairi.png" alt="Logo" fill sizes="40px" className="object-contain" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-heading font-bold text-primary-700 leading-tight">Khairiyyahh</span>
+                  <span className="font-heading font-bold text-primary-700 leading-tight">Khairiyyah</span>
                   <span className="text-[10px] tracking-widest text-gold-500 uppercase">Learning Centre</span>
                 </div>
               </Link>
@@ -315,4 +315,3 @@ export default function Navbar() {
     </>
   );
 }
-
