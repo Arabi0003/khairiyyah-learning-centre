@@ -1,11 +1,17 @@
 ﻿import type { Metadata } from 'next';
-import { Inter, Georgia } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-body',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-heading',
 });
 
 export const metadata: Metadata = {
@@ -35,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr" className={inter.variable}>
+    <html lang="en" dir="ltr" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <link rel="icon" href="/images/khairi.png" />
         <meta name="theme-color" content="#166534" />
