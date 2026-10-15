@@ -94,10 +94,10 @@ export default function Footer() {
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-3 mb-6 group">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden group-hover:scale-105 transition-transform bg-white">
-                  <Image src="/images/khairi.png" alt="Khairiyyahh Logo" fill sizes="48px" className="object-contain p-0.5" />
+                  <Image src="/images/khairi.png" alt="Khairiyyah Logo" fill sizes="48px" className="object-contain p-0.5" />
                 </div>
                 <div>
-                  <span className="block text-lg font-heading font-bold text-white">Khairiyyahh</span>
+                  <span className="block text-lg font-heading font-bold text-white">Khairiyyah</span>
                   <span className="block text-xs tracking-widest text-gold-400 uppercase">Learning Centre</span>
                 </div>
               </Link>
@@ -157,9 +157,9 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@Khairiyyahedu.com" className="flex items-center gap-3 text-gray-400 hover:text-gold-400 transition-colors text-sm group">
+                  <a href="mailto:info@khairiyyaedu.com" className="flex items-center gap-3 text-gray-400 hover:text-gold-400 transition-colors text-sm group">
                     <Mail size={18} className="text-primary-500 flex-shrink-0 group-hover:text-gold-400 transition-colors" />
-                    info@Khairiyyahedu.com
+                    info@khairiyyaedu.com
                   </a>
                 </li>
                 <li className="flex items-start gap-3 text-gray-400 text-sm">
@@ -174,7 +174,7 @@ export default function Footer() {
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-              <p>&copy; {currentYear ?? '2025'} Khairiyyahh Learning Centre. All rights reserved.</p>
+              <p>&copy; {currentYear ?? '2025'} Khairiyyah Learning Centre. All rights reserved.</p>
               <div className="flex items-center gap-6">
                 <Link href="/privacy" className="hover:text-gold-400 transition-colors">Privacy Policy</Link>
                 <Link href="/terms" className="hover:text-gold-400 transition-colors">Terms of Use</Link>

@@ -36,10 +36,10 @@ export default function VideoBackground() {
 
   return (
     <div className="video-container" aria-hidden="true">
-      {/* Instant CSS Gradient Background (0ms paint time) */}
+      {/* Instant CSS Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-midnight to-primary-950" />
 
-      {/* Video Element (Streams in non-blocking background) */}
+      {/* Video Element */}
       <video
         ref={videoRef}
         className={`transition-opacity duration-1000 ${
@@ -51,7 +51,6 @@ export default function VideoBackground() {
         playsInline
         preload="metadata"
         onEnded={handleEnded}
-        poster="/images/khairi.png"
         aria-hidden="true"
       >
         <source src="/videos/Khair.mp4" type="video/mp4" />
@@ -59,13 +58,6 @@ export default function VideoBackground() {
 
       {/* Dark readable overlay */}
       <div className="video-overlay" />
-      <div
-        className="absolute inset-0 z-[2] opacity-30"
-        style={{
-          background:
-            'radial-gradient(ellipse at 20% 50%, rgba(184, 134, 11, 0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(22, 101, 52, 0.1) 0%, transparent 50%)',
-        }}
-      />
     </div>
   );
 }

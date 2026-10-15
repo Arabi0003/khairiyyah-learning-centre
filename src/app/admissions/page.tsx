@@ -3,8 +3,8 @@ import Footer from '@/components/layout/Footer';
 import AdmissionsContent from './AdmissionsContent';
 
 export const metadata = {
-  title: 'Admissions | Khairiyyahh Learning Centre',
-  description: 'Apply to Khairiyyahh Learning Centre. Learn about our admissions process, requirements, and tuition.',
+  title: 'Admissions | Khairiyyah Learning Centre',
+  description: 'Apply to Khairiyyah Learning Centre. Learn about our admissions process, requirements, and tuition.',
 };
 
 export default function AdmissionsPage() {

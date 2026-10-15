@@ -3,7 +3,7 @@ import Footer from '@/components/layout/Footer';
 import CurriculumContent from './CurriculumContent';
 
 export const metadata = {
-  title: 'Curriculum | Khairiyyahh Learning Centre',
+  title: 'Curriculum | Khairiyyah Learning Centre',
   description: 'Explore our comprehensive curriculum blending academic excellence with Islamic education.',
 };
 

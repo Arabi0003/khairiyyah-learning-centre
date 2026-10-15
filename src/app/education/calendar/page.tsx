@@ -3,7 +3,7 @@ import Footer from '@/components/layout/Footer';
 import CalendarContent from './CalendarContent';
 
 export const metadata = {
-  title: 'Academic Calendar | Khairiyyahh Learning Centre',
+  title: 'Academic Calendar | Khairiyyah Learning Centre',
   description: 'View our academic calendar with important dates, events, and holidays.',
 };
 

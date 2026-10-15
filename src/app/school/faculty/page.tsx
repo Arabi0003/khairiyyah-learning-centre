@@ -3,7 +3,7 @@ import Footer from '@/components/layout/Footer';
 import FacultyContent from './FacultyContent';
 
 export const metadata = {
-  title: 'Faculty & Staff | Khairiyyahh Learning Centre',
+  title: 'Faculty & Staff | Khairiyyah Learning Centre',
   description: 'Meet our dedicated team of educators and staff members.',
 };
 

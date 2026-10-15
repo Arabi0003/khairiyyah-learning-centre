@@ -99,7 +99,7 @@ export default function AdmissionsContent() {
                 Our admissions team is here to guide you through the process.
               </p>
               <div className="space-y-3">
-                <a href="mailto:info@Khairiyyahedu.com" className="block w-full text-center bg-gold-500 hover:bg-gold-400 text-white py-3.5 rounded-xl font-semibold transition-colors">
+                <a href="mailto:info@khairiyyaedu.com" className="block w-full text-center bg-gold-500 hover:bg-gold-400 text-white py-3.5 rounded-xl font-semibold transition-colors">
                   Start Application
                 </a>
                 <a href="tel:+233594619640" className="block w-full text-center bg-white/10 hover:bg-white/20 text-white py-3.5 rounded-xl font-medium transition-colors border border-white/20">

@@ -3,7 +3,7 @@ import Footer from '@/components/layout/Footer';
 import EarlyChildhoodContent from './EarlyChildhoodContent';
 
 export const metadata = {
-  title: 'Early Childhood | Khairiyyahh Learning Centre',
+  title: 'Early Childhood | Khairiyyah Learning Centre',
   description: 'Our nurturing early childhood program for Pre-K and Kindergarten students.',
 };
 

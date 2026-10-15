@@ -3,7 +3,7 @@ import Footer from '@/components/layout/Footer';
 import MiddleSchoolContent from './MiddleSchoolContent';
 
 export const metadata = {
-  title: 'Middle School | Khairiyyahh Learning Centre',
+  title: 'Middle School | Khairiyyah Learning Centre',
   description: 'Our middle school program for grades 6-8 preparing students for academic and spiritual excellence.',
 };
 

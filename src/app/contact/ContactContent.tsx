@@ -47,13 +47,13 @@ export default function ContactContent() {
                   </div>
                 </a>
 
-                <a href="mailto:info@Khairiyyahedu.com" className="flex items-start gap-4 group">
+                <a href="mailto:info@khairiyyaedu.com" className="flex items-start gap-4 group">
                   <div className="w-12 h-12 bg-primary-50 group-hover:bg-primary-500 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-300">
                     <Mail size={20} className="text-primary-500 group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <h3 className="font-bold text-charcoal">Email</h3>
-                    <p className="text-gray-600">info@Khairiyyahedu.com</p>
+                    <p className="text-gray-600">info@khairiyyaedu.com</p>
                   </div>
                 </a>
 

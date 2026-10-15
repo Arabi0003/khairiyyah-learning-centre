@@ -3,7 +3,7 @@ import Footer from '@/components/layout/Footer';
 import IslamicStudiesContent from './IslamicStudiesContent';
 
 export const metadata = {
-  title: 'Islamic Studies | Khairiyyahh Learning Centre',
+  title: 'Islamic Studies | Khairiyyah Learning Centre',
   description: 'Our comprehensive Islamic Studies program nurturing faith, knowledge, and character.',
 };
 

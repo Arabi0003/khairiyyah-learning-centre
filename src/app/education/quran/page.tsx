@@ -3,7 +3,7 @@ import Footer from '@/components/layout/Footer';
 import QuranContent from './QuranContent';
 
 export const metadata = {
-  title: 'Quran Program | Khairiyyahh Learning Centre',
+  title: 'Quran Program | Khairiyyah Learning Centre',
   description: 'Our Quran memorization and tajweed program for all levels.',
 };
 

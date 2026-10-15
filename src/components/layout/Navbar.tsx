@@ -120,15 +120,13 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo & Name */}
             <Link href="/" prefetch={true} className="flex items-center gap-3 group" aria-label="Khairiyyah Learning Centre - Home">
-              <div className={`relative w-12 h-12 rounded-full overflow-hidden transition-all duration-300 group-hover:scale-105 ${
-                isScrolled ? 'bg-white shadow-sm' : 'bg-white/20 backdrop-blur-sm border border-white/30'
-              }`}>
+              <div className="w-12 h-12 relative flex-shrink-0">
                 <Image
                   src="/images/khairi.png"
                   alt="Khairiyyah Learning Centre Logo"
-                  fill
-                  sizes="48px"
-                  className="object-contain p-0.5"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain rounded-full bg-white p-0.5 shadow-sm group-hover:scale-105 transition-transform"
                   priority
                 />
               </div>
@@ -259,9 +257,7 @@ export default function Navbar() {
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-5 border-b border-gray-100">
               <Link href="/" prefetch={true} onClick={closeMobileMenu} className="flex items-center gap-2">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden">
-                  <Image src="/images/khairi.png" alt="Logo" fill sizes="40px" className="object-contain" />
-                </div>
+                <Image src="/images/khairi.png" alt="Logo" width={40} height={40} className="w-10 h-10 object-contain rounded-full" />
                 <div className="flex flex-col">
                   <span className="font-heading font-bold text-primary-700 leading-tight">Khairiyyah</span>
                   <span className="text-[10px] tracking-widest text-gold-500 uppercase">Learning Centre</span>

@@ -20,6 +20,7 @@ const config: Config = {
           700: '#14532d',
           800: '#0f3d1f',
           900: '#0a2614',
+          950: '#05180a',
         },
         gold: {
           50: '#fffbeb',
@@ -33,14 +34,6 @@ const config: Config = {
         cream: '#faf7f2',
         charcoal: '#1a1a2e',
         midnight: '#16213e',
-      },
-      fontFamily: {
-        heading: ['Georgia', 'Times New Roman', 'serif'],
-        body: ['Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-      },
-      animation: {
-        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-        'fade-in': 'fadeIn 1s ease-out forwards',
       },
     },
   },

@@ -3,8 +3,8 @@ import Footer from '@/components/layout/Footer';
 import MissionContent from './MissionContent';
 
 export const metadata = {
-  title: 'Our Mission | Khairiyyahh Learning Centre',
-  description: 'Our mission, vision, and guiding principles at Khairiyyahh Learning Centre.',
+  title: 'Our Mission | Khairiyyah Learning Centre',
+  description: 'Our mission, vision, and guiding principles at Khairiyyah Learning Centre.',
 };
 
 export default function MissionPage() {

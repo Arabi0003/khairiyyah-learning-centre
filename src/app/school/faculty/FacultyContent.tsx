@@ -35,7 +35,7 @@ export default function FacultyContent() {
                   <div className="aspect-square bg-gradient-to-br from-primary-100 to-gold-100 flex items-center justify-center relative overflow-hidden">
                     <div className="text-5xl group-hover:scale-110 transition-transform duration-500">👤</div>
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                      <a href="mailto:info@Khairiyyahedu.com" className="flex items-center gap-1 text-white text-sm hover:text-gold-300">
+                      <a href="mailto:info@khairiyyaedu.com" className="flex items-center gap-1 text-white text-sm hover:text-gold-300">
                         <Mail size={14} /> Email
                       </a>
                     </div>

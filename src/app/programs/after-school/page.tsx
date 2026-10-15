@@ -3,7 +3,7 @@ import Footer from '@/components/layout/Footer';
 import AfterSchoolContent from './AfterSchoolContent';
 
 export const metadata = {
-  title: 'After School Programs | Khairiyyahh Learning Centre',
+  title: 'After School Programs | Khairiyyah Learning Centre',
   description: 'Enrichment and care programs available after regular school hours.',
 };
 

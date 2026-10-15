@@ -22,7 +22,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: '2009', title: 'Foundation', description: 'Khairiyyahh Learning Centre was established with 30 students and a dream of excellence in Islamic education.' },
+  { year: '2009', title: 'Foundation', description: 'Khairiyyah Learning Centre was established with 30 students and a dream of excellence in Islamic education.' },
   { year: '2012', title: 'First Graduation', description: 'Our first cohort graduated with outstanding results, setting the standard for years to come.' },
   { year: '2015', title: 'Campus Expansion', description: 'New classrooms, a science lab, and a dedicated Quran memorization hall were added.' },
   { year: '2018', title: 'Recognition', description: 'Received national recognition for academic performance and community development.' },
@@ -56,7 +56,7 @@ export default function AboutContent() {
     <>
       <PageHero
         title="About Us"
-        subtitle="Discover the story, values, and people behind Khairiyyahh Learning Centre"
+        subtitle="Discover the story, values, and people behind Khairiyyah Learning Centre"
         breadcrumb="Home / School / About Us"
       />
 
@@ -84,7 +84,7 @@ export default function AboutContent() {
             </h2>
             <div className="mt-6 space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Founded in 2009, Khairiyyahh Learning Centre began with a simple yet profound vision: to provide
+                Founded in 2009, Khairiyyah Learning Centre began with a simple yet profound vision: to provide
                 an educational environment where children could flourish academically while deepening their
                 connection to Allah and Islamic values.
               </p>
