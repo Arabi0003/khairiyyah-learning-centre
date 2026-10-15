@@ -1,5 +1,12 @@
 ﻿import type { Metadata } from 'next';
+import { Inter, Georgia } from 'next/font/google';
 import './globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-body',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.khairiyyaedu.com'),
@@ -28,14 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" className={inter.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
         <link rel="icon" href="/images/khairi.png" />
         <meta name="theme-color" content="#166534" />
       </head>

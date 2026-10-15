@@ -5,38 +5,29 @@ import { useEffect, useRef, useState } from 'react';
 export default function VideoBackground() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [videoError, setVideoError] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    const handleCanPlay = () => setVideoLoaded(true);
-    const handleError = () => setVideoError(true);
-
-    video.addEventListener('canplaythrough', handleCanPlay);
-    video.addEventListener('error', handleError);
-
-    // Force play on load
-    const playVideo = () => {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          setVideoError(true);
-        });
-      }
+    const handleLoadedData = () => {
+      setVideoLoaded(true);
+      video.play().catch(() => {});
     };
 
-    playVideo();
+    if (video.readyState >= 3) {
+      setVideoLoaded(true);
+      video.play().catch(() => {});
+    } else {
+      video.addEventListener('loadeddata', handleLoadedData);
+    }
 
     return () => {
-      video.removeEventListener('canplaythrough', handleCanPlay);
-      video.removeEventListener('error', handleError);
+      video.removeEventListener('loadeddata', handleLoadedData);
     };
   }, []);
 
-  // Guarantee loop playback fallback for mobile browser edge cases
-  const handleVideoEnded = () => {
+  const handleEnded = () => {
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
       videoRef.current.play().catch(() => {});
@@ -45,38 +36,26 @@ export default function VideoBackground() {
 
   return (
     <div className="video-container" aria-hidden="true">
-      {/* Fallback background */}
-      <div
-        className="video-fallback absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/images/hero-fallback.jpg')",
-          backgroundColor: '#14532d',
-          backgroundBlendMode: 'overlay',
-        }}
-      />
+      {/* Instant CSS Gradient Background (0ms paint time) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-midnight to-primary-950" />
 
-      {!videoLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-700 via-midnight to-primary-900" />
-      )}
-
-      {!videoError && (
-        <video
-          ref={videoRef}
-          className={`transition-opacity duration-1000 ${
-            videoLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          onEnded={handleVideoEnded}
-          poster="/images/khairi.png"
-          aria-hidden="true"
-        >
-          <source src="/videos/Khair.mp4" type="video/mp4" />
-        </video>
-      )}
+      {/* Video Element (Streams in non-blocking background) */}
+      <video
+        ref={videoRef}
+        className={`transition-opacity duration-1000 ${
+          videoLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        onEnded={handleEnded}
+        poster="/images/khairi.png"
+        aria-hidden="true"
+      >
+        <source src="/videos/Khair.mp4" type="video/mp4" />
+      </video>
 
       {/* Dark readable overlay */}
       <div className="video-overlay" />
